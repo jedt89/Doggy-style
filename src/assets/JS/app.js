@@ -31,12 +31,9 @@ const hexColors = [
   '#4169E1'
 ];
 
-const getDogBreeds = async () =>
-  fetchData('https://dog.ceo/api/breeds/list/all');
-const getRandomImages = async () =>
-  fetchData('https://dog.ceo/api/breeds/image/random/50');
-const getImagesByBreed = async (breed) =>
-  fetchData(`https://dog.ceo/api/breed/${breed || 'hound'}/images`);
+const getDogBreeds = async () => fetchData('https://dog.ceo/api/breeds/list/all');
+const getRandomImages = async () => fetchData('https://dog.ceo/api/breeds/image/random/50');
+const getImagesByBreed = async (breed) => fetchData(`https://dog.ceo/api/breed/${breed || 'hound'}/images`);
 
 const fetchData = async (url) => {
   try {
